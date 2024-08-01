@@ -19,7 +19,7 @@
         'GRAD'0,
         'opsz'24;
     color: var(--light);
-    scale: 1.4;
+    scale: 1.2;
 }
 
 a,
@@ -83,7 +83,7 @@ ul {
     border-radius: 100rem;
     max-width: 2400px;
     margin: auto;
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .logo {
@@ -96,7 +96,47 @@ ul {
 }
 
 .navSearch {
-    padding-bottom: 32px;
+    margin-bottom: 32px;
+}
+
+.searchBar{
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-radius: 100rem;
+    font-size: 20px;
+    font-weight: 400;
+    background-color: var(--dark);
+    color: white;
+}
+
+#searchIcon{
+    cursor: pointer;
+}
+
+.searchBar .flexbox{
+    gap: 24px;
+}
+
+input[type=text] {
+    width: 360px;
+    box-sizing: border-box;
+    background-color: var(--dark);
+    border: none;
+    color: var(--light);
+    font-size: 18px;
+}
+
+input[type=text]:focus {
+    color: var(--light);
+    outline: none; /* Remove default outline */
+}
+
+.divider{
+    width: 1px;
+    height: 24px;
+    background-color: var(--light);
 }
 
 .chip,
@@ -110,7 +150,7 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 400;
 }
 
@@ -124,6 +164,7 @@ ul {
 .chip {
     background-color: var(--dark);
     color: var(--light);
+    cursor: pointer;
 }
 
 .flexGrid {
@@ -132,7 +173,7 @@ ul {
 }
 
 .cards {
-    background-color: #e1e1e1;
+    background-color: #0d0d0d;
     width: calc(100%/4 - 32px);
     height: 300px;
     border-radius: 16px;
@@ -176,7 +217,7 @@ ul {
 }
 
 .timeLine {
-    height: 55vh;
+    height: 69vh;
 }
 
 .discover {
@@ -189,4 +230,8 @@ ul {
     font-family: sans-serif;
     font-size: 4.2vw;
     color: var(--light);
+}
+
+.group .flexbox{
+    gap: 24px;
 }

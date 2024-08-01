@@ -18,22 +18,22 @@
                     <ul>
                         <li class="active"><span class="material-symbols-outlined">
                                 language
-                            </span> &nbsp;&nbsp; Web</li>
+                            </span> &nbsp; Web</li>
                         <li><span class="material-symbols-outlined">
                                 import_contacts
-                            </span> &nbsp;&nbsp; Books</li>
+                            </span> &nbsp; Books</li>
                         <li><span class="material-symbols-outlined">
                                 movie
-                            </span> &nbsp;&nbsp; Video</li>
+                            </span> &nbsp; Video</li>
                         <li><span class="material-symbols-outlined">
                                 speaker
-                            </span> &nbsp;&nbsp; Audio</li>
+                            </span> &nbsp; Audio</li>
                         <li><span class="material-symbols-outlined">
                                 subtitles
-                            </span> &nbsp;&nbsp; Software</li>
+                            </span> &nbsp; Software</li>
                         <li><span class="material-symbols-outlined">
                                 photo_camera
-                            </span> &nbsp;&nbsp; Images</li>
+                            </span> &nbsp; Images</li>
                     </ul>
                 </div>
                 <div class="signup">
@@ -47,13 +47,16 @@
         <div class="timeLine">
 
         </div>
-        <div class="navSearch">
+        <div class="navSearch" style="justify-content: center;">
             <div class="flexbox">
                 <div class="searchBar">
                     <div class="flexbox">
-                        <input type="text" id="lname" name="lname">
-                        |
-                        <input type="submit" value="Submit">
+                        <input type="text" placeholder="" id="searchInput" name="searchInput">
+                        <div class="divider"></div>
+                        <div id="searchIcon" onclick="submitSearch()">
+                            <span class="material-symbols-outlined">
+                                search</span>
+                        </div>
                     </div>
                 </div>
                 <div class="chips">
@@ -86,66 +89,70 @@
                 </div>
             </div>
         </div>
-            <div class="discover">
-                <div class="flexbox">
-                    <h1>Discover</h1>
-                    <div class="chips">
-                        <div class="flexbox">
-                            <div class="chip">Early 90s</div>
-                            <div class="chip">1995-1999</div>
-                            <div class="chip">2000-2010</div>
-                            <div class="chip">2010-2030</div>
-                            <div class="chip">Today</div>
+        <div class="discover">
+            <div class="flexbox">
+                <h1>Discover</h1>
+                <div class="group">
+                    <div class="flexbox">
+                        <div class="chips">
+                            <div class="flexbox" style="gap: 0;">
+                                <div class="chip">Early 90s</div>
+                                <div class="chip">1995-1999</div>
+                                <div class="chip">2000-2010</div>
+                                <div class="chip">2010-2030</div>
+                                <div class="chip">Today</div>
+                            </div>
                         </div>
-                    </div>
-                    |
-                    <div class="chips">
-                        <div class="flexbox">
-                            <div class="chip">Dark</div>
-                            <div class="chip">Light</div>
+                        <div class="divider"></div>
+                        <div class="chips">
+                            <div class="flexbox" style="gap: 0;">
+                                <div class="chip">Dark</div>
+                                <div class="chip">Light</div>
+                            </div>
                         </div>
-                    </div>
-                    |
-                    <div class="chips">
-                        <div class="flexbox">
-                            <div class="chip">All</div>
+                        <div class="divider"></div>
+                        <div class="chips">
+                            <div class="flexbox">
+                                <div class="chip">All</div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="flexGrid">
-                <div class="rows">
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                </div>
-                <div class="rows">
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                </div>
-                <div class="rows">
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                </div>
-                <div class="rows">
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                </div>
-                <div class="rows">
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                    <div class="cards"></div>
-                </div>
-                <div class="loadMore">Load More</div>
+        </div>
+        <div class="flexGrid">
+            <div class="rows">
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
             </div>
-     
+            <div class="rows">
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+            </div>
+            <div class="rows">
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+            </div>
+            <div class="rows">
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+            </div>
+            <div class="rows">
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+                <div class="cards"></div>
+            </div>
+            <div class="loadMore">Load More</div>
+        </div>
     </div>
+    <script src="script.js"></script>
 </body>
