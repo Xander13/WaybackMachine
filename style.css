@@ -1,40 +1,111 @@
-:root{
-    --verydark : #222222;
-    --dark : #2f2f2f;
-    --light : #f2f2f2;
+:root {
+    --verydark: #171717;
+    --dark: #222222;
+    --light: #f2f2f2;
+    --gap: 16px;
 }
 
-a, h1, h2, h3, h4, h5, h6, p, li{
+.contained {
+    max-width: calc(2400px - 64px);
+    margin: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL'0,
+        'wght'400,
+        'GRAD'0,
+        'opsz'24;
+    color: var(--light);
+    scale: 1.4;
+}
+
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+.chip {
     font-family: sans-serif;
 }
 
-body{
+body {
     background-color: var(--verydark);
 }
 
-.flexbox, ul{
+/* width */
+::-webkit-scrollbar {
+    width: 18px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--verydark);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--light);
+    border: 4px solid transparent;
+    border-radius: 8px;
+    background-clip: padding-box;
+}
+
+.active {
+    background-color: var(--light);
+    color: var(--dark) !important;
+}
+
+.active .material-symbols-outlined {
+    color: var(--dark) !important;
+}
+
+.flexbox,
+ul {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
-.nav{
+.border {
+    border: 1px solid var(--light);
+}
+
+.nav {
     background-color: var(--dark);
-    padding: 20px;
+    padding: 16px;
     border-radius: 100rem;
     max-width: 2400px;
     margin: auto;
     margin-top: 32px;
 }
 
-.nav li{
-    color: var(--light);
+.logo {
+    height: 28px;
 }
 
-.chips, .navitems li, .signup li{
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+.nav li {
+    color: var(--light);
+    cursor: pointer;
+}
+
+.navSearch {
+    padding-bottom: 32px;
+}
+
+.chip,
+.navitems li,
+.signup li {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     border-radius: 100rem;
     display: flex;
     align-items: center;
@@ -43,7 +114,79 @@ body{
     font-weight: 400;
 }
 
-.chips:hover, .navitems li:hover, .signup li:hover{
+.chip:hover,
+.navitems li:hover,
+.signup li:hover {
     background-color: var(--light);
     color: var(--dark);
+}
+
+.chip {
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.flexGrid {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.cards {
+    background-color: #e1e1e1;
+    width: calc(100%/4 - 32px);
+    height: 300px;
+    border-radius: 16px;
+    padding: 16px;
+    position: relative;
+}
+
+.rows {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 32px;
+}
+
+.cards h1 {
+    font-size: 2.2vw;
+    line-height: 2.2vw;
+    font-weight: 700;
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    color: var(--light);
+}
+
+.globe {
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    width: 380px;
+    height: 380px;
+    rotate: -30deg;
+}
+
+.navitems li:hover .material-symbols-outlined {
+    color: var(--dark);
+}
+
+.WebExplore {
+    background-color: var(--dark);
+    padding: 32px;
+    border-radius: 32px;
+}
+
+.timeLine {
+    height: 55vh;
+}
+
+.discover {
+    margin-top: 164px;
+    margin-bottom: 64px;
+    color: var(--light);
+}
+
+.discover h1 {
+    font-family: sans-serif;
+    font-size: 4.2vw;
+    color: var(--light);
 }

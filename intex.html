@@ -1,72 +1,61 @@
 <!DOCTYPE html>
+
 <head>
     <title>Wayback Machine – Web Archive</title>
     <link rel="icon" type="image/x-icon" href="Wayback_icon.png">
     <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="nav">
-        <div class="flexbox">
-            <div class="logo">
-                <img src="IA_Logo.svg" alt="logo">
-            </div>
-            <div class="navitems">
-                <ul>
-                    <li>Web</li>
-                    <li>Books</li>
-                    <li>Video</li>
-                    <li>Audio</li>
-                    <li>Software</li>
-                    <li>Images</li>
-                </ul>
-            </div>
-            <div class="signup">
-                <ul>
-                    <li>Sign Up</li>
-                    <li>Subscribe</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="navSearch">
-        <div class="flexbox">
-            <div class="searchBar">
-                <div class="flexbox">
-                    <input type="text" id="lname" name="lname">
-                    |
-                    <input type="submit" value="Submit">
-                </div>
-            </div>
-            <div class="chips">
-                <div class="flexbox">
-                    <div class="chip">Early 90s</div>
-                    <div class="chip">1995-1999</div>
-                    <div class="chip">2000-2010</div>
-                    <div class="chip">2010-2030</div>
-                    <div class="chip">Today</div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="WebExplore">
-        <div class="flexGrid">
-            <div class="rows">
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
-            </div>
-            <div class="rows">
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
-            </div>
-        </div>
-        <div class="discover">
+    <div class="contained">
+        <div class="nav">
             <div class="flexbox">
-                <h1>Discover</h1>
+                <img src="IA_Logo.svg" class="logo" alt="logo">
+                <div class="navitems">
+                    <ul>
+                        <li class="active"><span class="material-symbols-outlined">
+                                language
+                            </span> &nbsp;&nbsp; Web</li>
+                        <li><span class="material-symbols-outlined">
+                                import_contacts
+                            </span> &nbsp;&nbsp; Books</li>
+                        <li><span class="material-symbols-outlined">
+                                movie
+                            </span> &nbsp;&nbsp; Video</li>
+                        <li><span class="material-symbols-outlined">
+                                speaker
+                            </span> &nbsp;&nbsp; Audio</li>
+                        <li><span class="material-symbols-outlined">
+                                subtitles
+                            </span> &nbsp;&nbsp; Software</li>
+                        <li><span class="material-symbols-outlined">
+                                photo_camera
+                            </span> &nbsp;&nbsp; Images</li>
+                    </ul>
+                </div>
+                <div class="signup">
+                    <ul>
+                        <li>Sign Up</li>
+                        <li class="border">Subscribe</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="timeLine">
+
+        </div>
+        <div class="navSearch">
+            <div class="flexbox">
+                <div class="searchBar">
+                    <div class="flexbox">
+                        <input type="text" id="lname" name="lname">
+                        |
+                        <input type="submit" value="Submit">
+                    </div>
+                </div>
                 <div class="chips">
                     <div class="flexbox">
                         <div class="chip">Early 90s</div>
@@ -76,41 +65,87 @@
                         <div class="chip">Today</div>
                     </div>
                 </div>
-                |
-                <div class="chips">
-                    <div class="flexbox">
-                        <div class="chip">Dark</div>
-                        <div class="chip">Light</div>
+            </div>
+        </div>
+        <div class="WebExplore">
+            <div class="flexGrid">
+                <div class="rows">
+                    <div class="cards" style="overflow: hidden; background-color: var(--verydark);">
+                        <h1>Web <br> Classics</h1>
+                        <img src="globe.svg" class="globe" alt="globe">
                     </div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
                 </div>
-                |
-                <div class="chips">
-                    <div class="flexbox">
-                        <div class="chip">All</div>
-                    </div>
+                <div class="rows" style="margin-bottom: 0;">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
                 </div>
             </div>
         </div>
-        <div class="flexGrid">
-            <div class="rows">
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
+            <div class="discover">
+                <div class="flexbox">
+                    <h1>Discover</h1>
+                    <div class="chips">
+                        <div class="flexbox">
+                            <div class="chip">Early 90s</div>
+                            <div class="chip">1995-1999</div>
+                            <div class="chip">2000-2010</div>
+                            <div class="chip">2010-2030</div>
+                            <div class="chip">Today</div>
+                        </div>
+                    </div>
+                    |
+                    <div class="chips">
+                        <div class="flexbox">
+                            <div class="chip">Dark</div>
+                            <div class="chip">Light</div>
+                        </div>
+                    </div>
+                    |
+                    <div class="chips">
+                        <div class="flexbox">
+                            <div class="chip">All</div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="rows">
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
+            <div class="flexGrid">
+                <div class="rows">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                </div>
+                <div class="rows">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                </div>
+                <div class="rows">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                </div>
+                <div class="rows">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                </div>
+                <div class="rows">
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                    <div class="cards"></div>
+                </div>
+                <div class="loadMore">Load More</div>
             </div>
-            <div class="rows">
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
-                <div class="cards"></div>
-            </div>
-            <div class="loadMore">Load More</div>
-        </div>
+     
     </div>
 </body>
