@@ -1,8 +1,25 @@
 :root {
     --verydark: #171717;
+    --verylight: #ffffff;
     --dark: #222222;
     --light: #f2f2f2;
     --gap: 16px;
+}
+
+.lightMode{
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.colorModeToggle{
+    width: 24px;
+    height: 24px;
+    border-radius: 100rem;
+    background-color: var(--light);
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    z-index: 11111;
 }
 
 .contained {
@@ -152,6 +169,7 @@ input[type=text]:focus {
     justify-content: center;
     font-size: 18px;
     font-weight: 400;
+    text-wrap: nowrap;
 }
 
 .chip:hover,
@@ -176,7 +194,8 @@ input[type=text]:focus {
     background-color: #0d0d0d;
     width: calc(100%/4 - 32px);
     height: 300px;
-    border-radius: 16px;
+    /* border-radius: 16px; */
+    border: 1px solid rgba(128, 128, 128, 0.329);
     padding: 16px;
     position: relative;
 }
