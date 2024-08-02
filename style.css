@@ -6,12 +6,20 @@
     --gap: 16px;
 }
 
-.lightMode{
-    background-color: var(--light);
-    color: var(--dark);
+body {
+    overflow-x: hidden;
 }
 
-.colorModeToggle{
+.lightMode {
+    --verydark: #ffffff;
+    --verylight: #171717;
+    --dark: #222222;
+    --light: #f2f2f2;
+    --gray: #808080;
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+.colorModeToggle {
     width: 24px;
     height: 24px;
     border-radius: 100rem;
@@ -48,12 +56,14 @@ h5,
 h6,
 p,
 li,
-.chip {
+.chip,
+.webchip {
     font-family: sans-serif;
 }
 
 body {
     background-color: var(--verydark);
+    transition: color 0.5s ease, background-color 0.5s ease;
 }
 
 /* width */
@@ -76,11 +86,11 @@ body {
 
 .active {
     background-color: var(--light);
-    color: var(--dark) !important;
+    color: var(--dark);
 }
 
 .active .material-symbols-outlined {
-    color: var(--dark) !important;
+    color: var(--dark);
 }
 
 .flexbox,
@@ -116,7 +126,7 @@ ul {
     margin-bottom: 32px;
 }
 
-.searchBar{
+.searchBar {
     padding-left: 32px;
     padding-right: 32px;
     padding-top: 16px;
@@ -125,14 +135,14 @@ ul {
     font-size: 20px;
     font-weight: 400;
     background-color: var(--dark);
-    color: white;
+    color: var(--verylight);
 }
 
-#searchIcon{
+#searchIcon {
     cursor: pointer;
 }
 
-.searchBar .flexbox{
+.searchBar .flexbox {
     gap: 24px;
 }
 
@@ -147,16 +157,18 @@ input[type=text] {
 
 input[type=text]:focus {
     color: var(--light);
-    outline: none; /* Remove default outline */
+    outline: none;
+    /* Remove default outline */
 }
 
-.divider{
+.divider {
     width: 1px;
     height: 24px;
     background-color: var(--light);
 }
 
 .chip,
+.webchip,
 .navitems li,
 .signup li {
     padding-left: 32px;
@@ -185,6 +197,18 @@ input[type=text]:focus {
     cursor: pointer;
 }
 
+.light {
+    background-color: var(--light);
+    color: var(--dark);
+    cursor: pointer;
+}
+
+.dark {
+    background-color: var(--dark);
+    color: var(--light);
+    cursor: pointer;
+}
+
 .flexGrid {
     width: 100%;
     border-radius: 16px;
@@ -198,6 +222,25 @@ input[type=text]:focus {
     border: 1px solid rgba(128, 128, 128, 0.329);
     padding: 16px;
     position: relative;
+    cursor: pointer;
+}
+
+.imgBG {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.cards .flexbox {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    z-index: 2;
 }
 
 .rows {
@@ -251,6 +294,6 @@ input[type=text]:focus {
     color: var(--light);
 }
 
-.group .flexbox{
+.group .flexbox {
     gap: 24px;
 }

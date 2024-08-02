@@ -39,3 +39,10 @@ function submitSearch() {
     const searchValue = searchInput.value || searchInput.placeholder;
     alert(`Search submitted for: ${searchValue}`);
 }
+
+document.querySelector('.imgBG').onload = function() {
+    const iframeDocument = document.querySelector('.imgBG').contentDocument;
+    if (iframeDocument) {
+      iframeDocument.body.style.width = '100%';
+    }
+  };
