@@ -3,6 +3,7 @@
     --verylight: #ffffff;
     --dark: #222222;
     --light: #f2f2f2;
+    --transparentGray: rgba(128, 128, 128, 0.469);
     --gap: 16px;
 }
 
@@ -18,21 +19,23 @@ body {
 .lightMode {
     --verydark: #ffffff;
     --verylight: #171717;
-    --dark: #222222;
-    --light: #f2f2f2;
-    --gray: #808080;
-    transition: color 0.5s ease, background-color 0.5s ease;
+    --dark: #f2f2f2 ;
+    --light:#222222;
+    --gray: #e0e0e0;
+    --transparentGray: rgba(219, 219, 219, 0.806);
 }
 
 .colorModeToggle {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     border-radius: 100rem;
     background-color: var(--light);
-    position: fixed;
-    right: 16px;
-    bottom: 16px;
     z-index: 11111;
+    cursor: pointer;
+}
+
+.material-symbols-outlined{
+    font-size: 32px;
 }
 
 .material-symbols-outlined {
@@ -61,11 +64,10 @@ li,
 
 body {
     background-color: var(--verydark);
-    transition: color 0.5s ease, background-color 0.5s ease;
 }
 
 .active {
-    background-color: var(--light);
+    background-color: var(--light) !important;
     color: var(--dark) !important;
 }
 
@@ -85,15 +87,23 @@ ul {
 }
 
 .nav {
+    position: absolute;
+    z-index: 2;
+    max-width: 1800px;
+    margin: auto;
+    left: 32px;
+    right: 32px;
     background-color: var(--dark);
     padding: 16px;
     border-radius: 100rem;
     margin-top: 24px;
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .logo {
     height: 28px;
+    mix-blend-mode: difference;
 }
 
 .nav li {
@@ -103,10 +113,12 @@ ul {
 
 .navSearch {
     max-width: 1800px;
+    box-sizing: border-box;
     margin: auto;
-    margin-bottom: 32px;
-    padding-left: 32px;
-    padding-right: 32px;
+    left: 32px;
+    right: 32px;
+    position: absolute;
+    bottom: 32px;
 }
 
 .searchBar {
@@ -154,10 +166,10 @@ input[type=text]:focus {
 .webchip,
 .navitems li,
 .signup li {
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
     border-radius: 100rem;
     display: flex;
     align-items: center;
@@ -174,9 +186,19 @@ input[type=text]:focus {
     color: var(--dark);
 }
 
-.chip {
-    background-color: var(--dark);
+.chips{
+    margin-bottom: 64px;
+}
+
+.chips h2{
+    font-size: 32px;
     color: var(--light);
+    padding-right: 32px;
+}
+
+.chip {
+    background-color: var(--verydark);
+    color: var(--verylight);
     cursor: pointer;
 }
 
@@ -209,6 +231,23 @@ input[type=text]:focus {
    height: 100%;
    rotate: 0deg;
    transition: rotate 0.4s ease;
+   border: 1px solid var(--transparentGray);
+}
+
+.line{
+    background-color: var(--transparentGray);
+    height: 1px;
+    width: 100%;
+    margin-top: 232px;
+    margin-bottom: 232px;
+}
+
+.bar{
+    background-color: white;
+    width: 2px;
+    height: 32px;
+    margin-right: 32px;
+    margin-left: 32px;
 }
 
 .cards:hover{
@@ -274,7 +313,9 @@ input[type=text]:focus {
 }
 
 .timeLine {
-    height: 69vh;
+    position: relative;
+    height: 90vh;
+    transition: height 1s ease;
 }
 
 .discover {
@@ -295,6 +336,7 @@ input[type=text]:focus {
 
 .loadMore{
     background-color: var(--light);
+    color: var(--dark);
     padding: 16px;
     padding-left: 32px;
     padding-right: 32px;

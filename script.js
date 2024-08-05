@@ -40,9 +40,25 @@ function submitSearch() {
     alert(`Search submitted for: ${searchValue}`);
 }
 
-document.querySelector('.imgBG').onload = function() {
-    const iframeDocument = document.querySelector('.imgBG').contentDocument;
-    if (iframeDocument) {
-      iframeDocument.body.style.width = '100%';
+document.getElementById('colorModeToggle').addEventListener('click', function() {
+    document.body.classList.toggle('lightMode');
+    document.querySelector('.navSearch').classList.toggle('lightMode');
+    document.querySelector('.colorModeToggle').classList.toggle('lightMode');
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('searchInput');
+    const timeLine = document.querySelector('.timeLine');
+
+    if (searchInput && timeLine) {
+        searchInput.addEventListener('focus', () => {
+            timeLine.style.height = '100vh';
+        });
+
+        searchInput.addEventListener('blur', () => {
+            timeLine.style.height = '90vh';
+        });
+    } else {
+        console.error('Elements not found: searchInput or timeLine');
     }
-  };
+});
