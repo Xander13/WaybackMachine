@@ -10,6 +10,11 @@ body {
     overflow-x: hidden;
 }
 
+.contained{
+    max-width: 1800px;
+    margin: auto;
+}
+
 .lightMode {
     --verydark: #ffffff;
     --verylight: #171717;
@@ -28,13 +33,6 @@ body {
     right: 16px;
     bottom: 16px;
     z-index: 11111;
-}
-
-.contained {
-    max-width: calc(2400px - 64px);
-    margin: auto;
-    padding-left: 32px;
-    padding-right: 32px;
 }
 
 .material-symbols-outlined {
@@ -66,27 +64,9 @@ body {
     transition: color 0.5s ease, background-color 0.5s ease;
 }
 
-/* width */
-::-webkit-scrollbar, .cards iframe ::-webkit-scrollbar {
-    width: 14px;
-}
-
-/* Track */
-::-webkit-scrollbar-track, .cards iframe ::-webkit-scrollbar-track{
-    background: var(--verydark);
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb, .cards iframe ::-webkit-scrollbar-thumb {
-    background: var(--light);
-    border: 4px solid transparent;
-    border-radius: 8px;
-    background-clip: padding-box;
-}
-
 .active {
     background-color: var(--light);
-    color: var(--dark);
+    color: var(--dark) !important;
 }
 
 .active .material-symbols-outlined {
@@ -108,9 +88,8 @@ ul {
     background-color: var(--dark);
     padding: 16px;
     border-radius: 100rem;
-    max-width: 2400px;
-    margin: auto;
-    margin-top: 16px;
+    margin-top: 24px;
+    overflow: hidden;
 }
 
 .logo {
@@ -123,7 +102,11 @@ ul {
 }
 
 .navSearch {
+    max-width: 1800px;
+    margin: auto;
     margin-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
 }
 
 .searchBar {
@@ -213,20 +196,37 @@ input[type=text]:focus {
     display: grid;
     width: 100%;
     height: 100%;
-    column-gap: 16px;
-    row-gap: 16px;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 64px;
+    row-gap: 64px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .cards {
    position: relative;
+   background-color: #000000;
+   width: 100%;
+   height: 100%;
+   rotate: 0deg;
+   transition: rotate 0.4s ease;
+}
+
+.cards:hover{
+    transition: 0.4s ease;
+    rotate: 2deg;
 }
 
 .imgBG {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: opacity 0.2s ease;
+}
+
+
+.imgBG:hover{
+    transition: opacity 0.2s ease;
+    cursor: pointer;
 }
 
 .cards .flexbox {
@@ -236,12 +236,6 @@ input[type=text]:focus {
     right: 16px;
     z-index: 2;
 }
-
-/* .rows {
-    display: flex;
-    gap: 32px;
-    margin-bottom: 32px;
-} */
 
 .cards h1 {
     font-size: 2.2vw;
@@ -262,6 +256,14 @@ input[type=text]:focus {
     rotate: -30deg;
 }
 
+.earth{
+    position: absolute;
+    right: -100px;
+    top: -100px;
+    width: 380px;
+    height: 380px;
+}
+
 .navitems li:hover .material-symbols-outlined {
     color: var(--dark);
 }
@@ -269,7 +271,6 @@ input[type=text]:focus {
 .WebExplore {
     background-color: var(--dark);
     padding: 32px;
-    border-radius: 32px;
 }
 
 .timeLine {
@@ -290,6 +291,21 @@ input[type=text]:focus {
 
 .group .flexbox {
     gap: 24px;
+}
+
+.loadMore{
+    background-color: var(--light);
+    padding: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    margin: auto;
+    margin-top: 64px;
+    margin-bottom: 64px;
+    border-radius: 100rem;
+    font-family: sans-serif;
+    width: fit-content;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 
