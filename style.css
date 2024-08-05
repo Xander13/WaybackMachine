@@ -99,6 +99,7 @@ ul {
     overflow: hidden;
     box-sizing: border-box;
     background-color: var(--dark);
+    display: none;
 }
 
 .logo {
@@ -200,6 +201,33 @@ input[type=text]:focus {
     color: var(--verylight);
     border: 1px solid var(--gray);
     cursor: pointer;
+}
+
+.etwAAnimation{
+    display: none;
+}
+
+.timelineNav{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 32px;
+    height: 32px;
+}
+
+.timelineNav .chips{
+    margin-bottom: 0;
+}
+
+.exit{
+    background-color: var(--light);
+    height: 48px;
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100rem;
 }
 
 .light {
