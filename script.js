@@ -49,14 +49,17 @@ document.getElementById('colorModeToggle').addEventListener('click', function() 
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');
     const timeLine = document.querySelector('.timeLine');
+    const searchBar = document.querySelector('.searchBar');
 
     if (searchInput && timeLine) {
         searchInput.addEventListener('focus', () => {
             timeLine.style.height = '100vh';
+            searchBar.style.border = '1px solid white';
         });
 
         searchInput.addEventListener('blur', () => {
             timeLine.style.height = '90vh';
+            searchBar.style.border = '1px solid transparent';
         });
     } else {
         console.error('Elements not found: searchInput or timeLine');
