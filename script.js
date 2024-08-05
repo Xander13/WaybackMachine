@@ -65,3 +65,34 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Elements not found: searchInput or timeLine');
     }
 });
+
+//Rotating cards and web viewer
+const cards = document.querySelectorAll('.carousel-card');
+let carouselIndex = 2;  // Declare carouselIndex to avoid conflict
+
+function rotateCarousel() {
+    cards.forEach((card, index) => {
+        card.style.transition = 'transform 1s, z-index 1s';
+        if (index === carouselIndex) {
+            card.style.transform = 'translateY(0) scale(1)';
+            card.style.zIndex = 3;
+        } else if (index === (carouselIndex + 1) % cards.length) {
+            card.style.transform = 'translateY(9vh) scale(0.9)';
+            card.style.zIndex = 2;
+        } else if (index === (carouselIndex + 2) % cards.length) {
+            card.style.transform = 'translateY(16vh) scale(0.8)';
+            card.style.zIndex = 1;
+        } else if (index === (carouselIndex - 1 + cards.length) % cards.length) {
+            card.style.transform = 'translateY(-9vh) scale(0.9)';
+            card.style.zIndex = 2;
+        } else if (index === (carouselIndex - 2 + cards.length) % cards.length) {
+            card.style.transform = 'translateY(-16vh) scale(0.8)';
+            card.style.zIndex = 1;
+        }
+    });
+
+    carouselIndex = (carouselIndex + 1) % cards.length;
+}
+
+setInterval(rotateCarousel, 4000);
+rotateCarousel();
