@@ -27,8 +27,8 @@ body {
 }
 
 .colorModeToggle {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     border-radius: 100rem;
     background-color: var(--light);
     z-index: 11111;
@@ -93,13 +93,14 @@ ul {
     margin: auto;
     left: 32px;
     right: 32px;
+    top: -128px;
     padding: 16px;
     border-radius: 100rem;
     margin-top: 16px;
     overflow: hidden;
     box-sizing: border-box;
     background-color: var(--dark);
-    display: none;
+    transition: top 1s ease;
 }
 
 .logo {
@@ -203,10 +204,6 @@ input[type=text]:focus {
     cursor: pointer;
 }
 
-.etwAAnimation{
-    display: none;
-}
-
 .timelineNav{
     position: absolute;
     top: 0;
@@ -214,20 +211,54 @@ input[type=text]:focus {
     right: 0;
     padding: 32px;
     height: 32px;
+    max-width: 1800px;
+    margin: auto;
 }
 
-.timelineNav .chips{
-    margin-bottom: 0;
+.exploreTimeLine {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.etwAAnimation {
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+}
+
+.etwAAnimation.visible {
+    opacity: 1;
+}
+
+.nav {
+    position: absolute; /* or fixed/absolute depending on your layout */
+    top: -128px; /* Initial value before the button is clicked */
+    transition: top 0.5s ease-in-out; /* Add transition for smooth movement */
+}
+
+#timelineChips {
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+.hidden {
+    display: none;
 }
 
 .exit{
     background-color: var(--light);
+    border: none;
     height: 48px;
     width: 48px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100rem;
+    cursor: pointer;
+    border: 1px solid var(--light);
+}
+
+.exit:hover{
+    background-color: var(--verydark);
 }
 
 .light {
@@ -271,7 +302,7 @@ input[type=text]:focus {
 }
 
 .bar{
-    background-color: white;
+    background-color: var(--light);
     width: 2px;
     height: 32px;
     margin-right: 32px;
@@ -344,6 +375,7 @@ input[type=text]:focus {
     position: relative;
     height: 90vh;
     width: 100%;
+    top: 0;
     transition: height 1s ease;
     display: flex;
     justify-content: center;

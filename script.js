@@ -96,3 +96,27 @@ function rotateCarousel() {
 
 setInterval(rotateCarousel, 4000);
 rotateCarousel();
+
+
+//display the timeline or the default homescreen
+document.getElementById('close').onclick = function() {
+    // Fade out the .exploreTimeLine and #timelineChips elements
+    document.querySelector('.exploreTimeLine').style.opacity = '0';
+    document.getElementById('timelineChips').style.opacity = '0';
+
+    // Wait for the fade out transition to complete before changing display
+    setTimeout(function() {
+        document.querySelector('.exploreTimeLine').classList.add('hidden');
+        document.getElementById('timelineChips').classList.add('hidden');
+
+        // Fade in the .etwAAnimation class
+        const etwAAnimation = document.querySelector('.etwAAnimation');
+        etwAAnimation.classList.remove('hidden');
+        setTimeout(function() {
+            etwAAnimation.classList.add('visible');
+        }, 10); // Small delay to trigger the transition
+    }, 500); // Match the transition duration in CSS
+
+    // Set the .nav top to 0
+    document.querySelector('.nav').style.top = '0';
+};

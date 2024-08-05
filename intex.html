@@ -12,61 +12,49 @@
 </head>
 
 <body>
-    <div class="contained" style="padding-left: 32px; padding-right: 32px;">
-        <div class="nav" id="navshit">
-            <div class="flexbox">
-                <img src="IA_Logo.svg" class="logo" alt="logo">
-                <div class="navitems">
-                    <ul>
-                        <li class="active"><span class="material-symbols-outlined">
-                                language
-                            </span> &nbsp; Web</li>
-                        <li><span class="material-symbols-outlined">
-                                import_contacts
-                            </span> &nbsp; Books</li>
-                        <li><span class="material-symbols-outlined">
-                                movie
-                            </span> &nbsp; Video</li>
-                        <li><span class="material-symbols-outlined">
-                                speaker
-                            </span> &nbsp; Audio</li>
-                        <li><span class="material-symbols-outlined">
-                                subtitles
-                            </span> &nbsp; Software</li>
-                        <li><span class="material-symbols-outlined">
-                                photo_camera
-                            </span> &nbsp; Images</li>
-                    </ul>
-                </div>
-                <div class="signup">
-                    <ul>
-                        <li>Sign Up</li>
-                        <li class="border">Subscribe</li>
-                    </ul>
-                </div>
+    <div class="nav" id="navshit">
+        <div class="flexbox">
+            <img src="IA_Logo.svg" class="logo" alt="logo">
+            <div class="navitems">
+                <ul>
+                    <li class="active"><span class="material-symbols-outlined">
+                            language
+                        </span> &nbsp; Web</li>
+                    <li><span class="material-symbols-outlined">
+                            import_contacts
+                        </span> &nbsp; Books</li>
+                    <li><span class="material-symbols-outlined">
+                            movie
+                        </span> &nbsp; Video</li>
+                    <li><span class="material-symbols-outlined">
+                            speaker
+                        </span> &nbsp; Audio</li>
+                    <li><span class="material-symbols-outlined">
+                            subtitles
+                        </span> &nbsp; Software</li>
+                    <li><span class="material-symbols-outlined">
+                            photo_camera
+                        </span> &nbsp; Images</li>
+                </ul>
+            </div>
+            <div class="signup">
+                <ul>
+                    <li>Sign Up</li>
+                    <li class="border">Subscribe</li>
+                </ul>
             </div>
         </div>
     </div>
     <div class="timeLine">
         <div class="exploreTimeLine">
             <div class="timelineNav">
-                <div class="flexbox">
-                    <div class="exit">
-                        <span class="material-symbols-outlined">
+                <div class="flexbox" style="align-items: left;">
+                    <img src="IA_Logo_sub.svg" class="logo" alt="logo">
+                    <button id="close" class="exit">
+                        <span class="material-symbols-outlined" style="mix-blend-mode: difference;">
                             close
                         </span>
-                    </div>
-                    <div class="chips">
-                        <div class="flexbox">
-                            <div class="flexbox" style="gap: 12px;">
-                                <div class="chip">Early 90s</div>
-                                <div class="chip">1995-1999</div>
-                                <div class="chip">2000-2010</div>
-                                <div class="chip">2010-2030</div>
-                                <div class="chip">Curent</div>
-                            </div>
-                        </div>
-                    </div>
+                    </button>
                 </div>
             </div>
             <div class="timelineDates">
@@ -74,18 +62,20 @@
             </div>
 
         </div>
-        <div class="flexbox etwAAnimation" style="gap: 4vw;">
-            <h1>Explore</h1>
-            <div class="carousel">
-                <div class="carousel-card" style="z-index: 1;">the web</div>
-                <div class="carousel-card" style="z-index: 2;">the web</div>
-                <div class="carousel-card" style="z-index: 3;">the web</div>
-                <div class="carousel-card" style="z-index: 2;">the web</div>
-                <div class="carousel-card" style="z-index: 1;">the web</div>
+        <div class="etwAAnimation">
+            <div class="flexbox" style="gap: 4vw;">
+                <h1>Explore</h1>
+                <div class="carousel">
+                    <div class="carousel-card" style="z-index: 1;">the web</div>
+                    <div class="carousel-card" style="z-index: 2;">the web</div>
+                    <div class="carousel-card" style="z-index: 3;">the web</div>
+                    <div class="carousel-card" style="z-index: 2;">the web</div>
+                    <div class="carousel-card" style="z-index: 1;">the web</div>
+                </div>
+                <h1>Archive</h1>
             </div>
-            <h1>Archive</h1>
         </div>
-        <div class="navSearch" style="justify-content: center;">
+        <div class="navSearch">
             <div class="flexbox" style="align-items: end;">
                 <div class="searchBar">
                     <div class="flexbox">
@@ -97,7 +87,19 @@
                         </div>
                     </div>
                 </div>
-                <div class="flexbox" style="gap: 16px;">
+                <div class="flexbox" style="gap: 32px;">
+                    <div class="chips" id="timelineChips" style="margin-bottom: 0;">
+                        <div class="flexbox">
+                            <div class="flexbox" style="gap: 12px;">
+                                <div class="chip">Early 90s</div>
+                                <div class="chip">1995-1999</div>
+                                <div class="chip">2000-2010</div>
+                                <div class="chip">2010-2030</div>
+                                <div class="chip">Curent</div>
+                            </div>
+                            <div class="bar"></div>
+                        </div>
+                    </div>
                     <div class="colorModeToggle" id="colorModeToggle"></div>
                 </div>
             </div>
