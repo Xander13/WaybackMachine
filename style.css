@@ -98,6 +98,7 @@ ul {
     margin-top: 16px;
     overflow: hidden;
     box-sizing: border-box;
+    background-color: var(--dark);
 }
 
 .logo {
