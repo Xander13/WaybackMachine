@@ -98,6 +98,19 @@ setInterval(rotateCarousel, 4000);
 rotateCarousel();
 
 
+//set nav back down when user reach bottom of webpage
+window.addEventListener('scroll', function() {
+    const nav = document.querySelector('.nav');
+    const footer = document.querySelector('footer');
+    const navBottom = nav.getBoundingClientRect().bottom;
+    const footerTop = footer.getBoundingClientRect().top;
+
+    // Check if the bottom of the nav has reached the top of the footer
+    if (navBottom >= footerTop) {
+        nav.style.top = '0';
+    }
+});
+
 //display the timeline or the default homescreen
 document.getElementById('close').onclick = function () {
     // Fade out the .exploreTimeLine and #timelineChips elements
@@ -123,12 +136,12 @@ document.getElementById('close').onclick = function () {
 
 //View 5 websites
 const container = document.querySelector('.stackedCards');
-const baseWidth = 80; // 80vw
+const baseWidth = 90; // 80vw
 
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 12; i++) {
     const div = document.createElement('div');
     div.classList.add('stacked-div');
-    div.style.width = `${baseWidth * (1 - i * 0.09)}vw`; // Decrease width by 9% each time
+    div.style.width = `${baseWidth * (1 - i * 0.05)}vw`; // Decrease width by 9% each time
     div.style.zIndex = 5 - i; // Stacking order
     const bottomPosition = i * 10; // Calculate bottom position
     div.style.bottom = `${bottomPosition}vh`; // Set bottom position
