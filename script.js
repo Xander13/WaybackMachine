@@ -40,7 +40,7 @@ function submitSearch() {
     alert(`Search submitted for: ${searchValue}`);
 }
 
-document.getElementById('colorModeToggle').addEventListener('click', function() {
+document.getElementById('colorModeToggle').addEventListener('click', function () {
     document.body.classList.toggle('lightMode');
     document.querySelector('.navSearch').classList.toggle('lightMode');
     document.querySelector('.colorModeToggle').classList.toggle('lightMode');
@@ -99,20 +99,20 @@ rotateCarousel();
 
 
 //display the timeline or the default homescreen
-document.getElementById('close').onclick = function() {
+document.getElementById('close').onclick = function () {
     // Fade out the .exploreTimeLine and #timelineChips elements
     document.querySelector('.exploreTimeLine').style.opacity = '0';
     document.getElementById('timelineChips').style.opacity = '0';
 
     // Wait for the fade out transition to complete before changing display
-    setTimeout(function() {
+    setTimeout(function () {
         document.querySelector('.exploreTimeLine').classList.add('hidden');
         document.getElementById('timelineChips').classList.add('hidden');
 
         // Fade in the .etwAAnimation class
         const etwAAnimation = document.querySelector('.etwAAnimation');
         etwAAnimation.classList.remove('hidden');
-        setTimeout(function() {
+        setTimeout(function () {
             etwAAnimation.classList.add('visible');
         }, 10); // Small delay to trigger the transition
     }, 500); // Match the transition duration in CSS
@@ -120,3 +120,28 @@ document.getElementById('close').onclick = function() {
     // Set the .nav top to 0
     document.querySelector('.nav').style.top = '0';
 };
+
+//View 5 websites
+const container = document.querySelector('.stackedCards');
+const baseWidth = 80; // 80vw
+
+for (let i = 0; i < 5; i++) {
+    const div = document.createElement('div');
+    div.classList.add('stacked-div');
+    div.style.width = `${baseWidth * (1 - i * 0.09)}vw`; // Decrease width by 9% each time
+    div.style.zIndex = 5 - i; // Stacking order
+    const bottomPosition = i * 10; // Calculate bottom position
+    div.style.bottom = `${bottomPosition}vh`; // Set bottom position
+    container.appendChild(div);
+
+    // Add hover event listeners for cards except the first one
+    if (i > 0) {
+        div.addEventListener('mouseenter', () => {
+            div.style.bottom = `${bottomPosition + 20}vh`; // Pop up on hover
+        });
+
+        div.addEventListener('mouseleave', () => {
+            div.style.bottom = `${bottomPosition}vh`; // Return to original position
+        });
+    }
+}

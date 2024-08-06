@@ -12,7 +12,7 @@ body {
     overflow-x: hidden;
 }
 
-.contained{
+.contained {
     max-width: 1800px;
     margin: auto;
 }
@@ -20,8 +20,8 @@ body {
 .lightMode {
     --verydark: #ffffff;
     --verylight: #171717;
-    --dark: #f2f2f2 ;
-    --light:#222222;
+    --dark: #f2f2f2;
+    --light: #222222;
     --gray: #343434;
     --transparentGray: rgb(217, 217, 217);
 }
@@ -35,7 +35,7 @@ body {
     cursor: pointer;
 }
 
-.material-symbols-outlined{
+.material-symbols-outlined {
     font-size: 22px;
 }
 
@@ -121,6 +121,7 @@ ul {
     right: 32px;
     position: absolute;
     bottom: 32px;
+    z-index: 5;
 }
 
 .searchBar {
@@ -188,11 +189,11 @@ input[type=text]:focus {
     color: var(--dark);
 }
 
-.chips{
+.chips {
     margin-bottom: 64px;
 }
 
-.chips h2{
+.chips h2 {
     font-size: 32px;
     color: var(--light);
     padding-right: 32px;
@@ -202,9 +203,10 @@ input[type=text]:focus {
     color: var(--verylight);
     border: 1px solid var(--gray);
     cursor: pointer;
+    background-color: var(--dark);
 }
 
-.timelineNav{
+.timelineNav {
     position: absolute;
     top: 0;
     left: 0;
@@ -213,6 +215,64 @@ input[type=text]:focus {
     height: 32px;
     max-width: 1800px;
     margin: auto;
+    z-index: 5;
+}
+
+.stackedCards {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1s ease; /* Smooth transition */
+    cursor: pointer;
+}
+
+.stacked-div:nth-child(1){
+    background: url('Yahoo1999.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stacked-div:nth-child(2){
+    background: url('Yahoo1999.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stacked-div:nth-child(3){
+    background: url('Yahoo1999.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stacked-div:nth-child(4){
+    background: url('Yahoo1999.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stacked-div:nth-child(5){
+    background: url('Yahoo1999.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stacked-div:hover {
+    bottom: calc(var(--bottom-position) + 20vh); /* Pop up on hover */
+    transition: 1s ease; /* Smooth transition */
+}
+
+.stacked-div {
+    position: absolute;
+    height: 900px;
+    background-color: rgb(172, 172, 172);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }
 
 .exploreTimeLine {
@@ -230,9 +290,12 @@ input[type=text]:focus {
 }
 
 .nav {
-    position: absolute; /* or fixed/absolute depending on your layout */
-    top: -128px; /* Initial value before the button is clicked */
-    transition: top 0.5s ease-in-out; /* Add transition for smooth movement */
+    position: absolute;
+    /* or fixed/absolute depending on your layout */
+    top: -128px;
+    /* Initial value before the button is clicked */
+    transition: top 0.5s ease-in-out;
+    /* Add transition for smooth movement */
 }
 
 #timelineChips {
@@ -244,7 +307,7 @@ input[type=text]:focus {
     display: none;
 }
 
-.exit{
+.exit {
     background-color: var(--light);
     border: none;
     height: 48px;
@@ -257,7 +320,7 @@ input[type=text]:focus {
     border: 1px solid var(--light);
 }
 
-.exit:hover{
+.exit:hover {
     background-color: var(--verydark);
 }
 
@@ -284,16 +347,16 @@ input[type=text]:focus {
 }
 
 .cards {
-   position: relative;
-   background-color: #000000;
-   width: 100%;
-   height: 100%;
-   rotate: 0deg;
-   transition: rotate 0.4s ease;
-   border: 1px solid var(--transparentGray);
+    position: relative;
+    background-color: #000000;
+    width: 100%;
+    height: 100%;
+    rotate: 0deg;
+    transition: rotate 0.4s ease;
+    border: 1px solid var(--transparentGray);
 }
 
-.line{
+.line {
     background-color: var(--transparentGray);
     height: 1px;
     width: 100%;
@@ -301,7 +364,7 @@ input[type=text]:focus {
     margin-bottom: 232px;
 }
 
-.bar{
+.bar {
     background-color: var(--light);
     width: 2px;
     height: 32px;
@@ -309,20 +372,20 @@ input[type=text]:focus {
     margin-left: 32px;
 }
 
-.cards:hover{
+.cards:hover {
     transition: 0.4s ease;
     rotate: 2deg;
 }
 
 .imgBG {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.2s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.2s ease;
 }
 
 
-.imgBG:hover{
+.imgBG:hover {
     transition: opacity 0.2s ease;
     cursor: pointer;
 }
@@ -354,7 +417,7 @@ input[type=text]:focus {
     rotate: -30deg;
 }
 
-.earth{
+.earth {
     position: absolute;
     right: -100px;
     top: -100px;
@@ -382,7 +445,7 @@ input[type=text]:focus {
     align-items: center;
 }
 
-.timeLine h1{
+.timeLine h1 {
     color: var(--light);
     font-size: 4vw;
     font-family: sans-serif;
@@ -410,15 +473,17 @@ input[type=text]:focus {
     transition: transform 1s, z-index 1s;
     font-size: 4vw;
     font-family: sans-serif;
- 
+
 }
 
 .carousel-card:nth-child(1) {
-    transform: translateY(-9vh) scale(0.8); /* Adjust translateY value */
+    transform: translateY(-9vh) scale(0.8);
+    /* Adjust translateY value */
 }
 
 .carousel-card:nth-child(2) {
-    transform: translateY(-12.5vh) scale(0.9); /* Adjust translateY value */
+    transform: translateY(-12.5vh) scale(0.9);
+    /* Adjust translateY value */
 }
 
 .carousel-card:nth-child(3) {
@@ -426,11 +491,13 @@ input[type=text]:focus {
 }
 
 .carousel-card:nth-child(4) {
-    transform: translateY(12.5vh) scale(0.9); /* Adjust translateY value */
+    transform: translateY(12.5vh) scale(0.9);
+    /* Adjust translateY value */
 }
 
 .carousel-card:nth-child(5) {
-    transform: translateY(9vh) scale(0.8); /* Adjust translateY value */
+    transform: translateY(9vh) scale(0.8);
+    /* Adjust translateY value */
 }
 
 .discover {
@@ -449,7 +516,7 @@ input[type=text]:focus {
     gap: 24px;
 }
 
-.loadMore{
+.loadMore {
     background-color: var(--light);
     color: var(--dark);
     padding: 16px;
@@ -481,7 +548,7 @@ input[type=text]:focus {
 }
 
 @media (max-width: 600px) {
-    body{
+    body {
         overflow-x: hidden;
     }
 
@@ -494,16 +561,16 @@ input[type=text]:focus {
         width: 100%;
     }
 
-    .colorModeToggle{
+    .colorModeToggle {
         display: none;
     }
 
-    .searchBar{
+    .searchBar {
         width: 100%;
     }
 
-    .navSearch{
-       left: 32px;
-       right:32px
+    .navSearch {
+        left: 32px;
+        right: 32px
     }
 }
