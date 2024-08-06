@@ -133,15 +133,4 @@ for (let i = 0; i < 5; i++) {
     const bottomPosition = i * 10; // Calculate bottom position
     div.style.bottom = `${bottomPosition}vh`; // Set bottom position
     container.appendChild(div);
-
-    // Add hover event listeners for cards except the first one
-    if (i > 0) {
-        div.addEventListener('mouseenter', () => {
-            div.style.bottom = `${bottomPosition + 20}vh`; // Pop up on hover
-        });
-
-        div.addEventListener('mouseleave', () => {
-            div.style.bottom = `${bottomPosition}vh`; // Return to original position
-        });
-    }
 }
