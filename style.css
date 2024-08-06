@@ -473,7 +473,6 @@ input[type=text]:focus {
     transition: transform 1s, z-index 1s;
     font-size: 4vw;
     font-family: sans-serif;
-
 }
 
 .carousel-card:nth-child(1) {
