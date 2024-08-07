@@ -40,11 +40,11 @@ function submitSearch() {
     alert(`Search submitted for: ${searchValue}`);
 }
 
-document.getElementById('colorModeToggle').addEventListener('click', function () {
-    document.body.classList.toggle('lightMode');
-    document.querySelector('.navSearch').classList.toggle('lightMode');
-    document.querySelector('.colorModeToggle').classList.toggle('lightMode');
-});
+// document.getElementById('colorModeToggle').addEventListener('click', function () {
+//     document.body.classList.toggle('lightMode');
+//     document.querySelector('.navSearch').classList.toggle('lightMode');
+//     document.querySelector('.colorModeToggle').classList.toggle('lightMode');
+// });
 
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('searchInput');

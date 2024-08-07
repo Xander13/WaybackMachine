@@ -12,11 +12,11 @@ body {
     overflow-x: hidden;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 0;
 }
 
-footer{
+footer {
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -24,7 +24,7 @@ footer{
     overflow: hidden;
 }
 
-footer .footerGlobe{
+footer .footerGlobe {
     position: absolute;
     right: -7vw;
     bottom: -4vw;
@@ -138,11 +138,16 @@ ul {
     max-width: 1800px;
     box-sizing: border-box;
     margin: auto;
-    left: 32px;
-    right: 32px;
+    left: 0;
+    right: 0;
+    bottom: 0;
     position: absolute;
-    bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 32px;
+    padding-top: 32px;
     z-index: 5;
+    background-color: var(--verydark);
 }
 
 .searchBar {
@@ -256,43 +261,46 @@ input[type=text]:focus {
     position: absolute;
     height: 400px;
     background-color: rgb(130, 130, 130);
-    transition: bottom 0.5s ease; /* Smooth transition */
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transition: bottom 0.5s ease;
+    /* Smooth transition */
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
 
-.stacked-div:nth-child(1){
+.stacked-div:nth-child(1) {
     background: url('yahoo2024.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.stacked-div:nth-child(2){
+.stacked-div:nth-child(2) {
     background: url('yahoo2021.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.stacked-div:nth-child(3){
+.stacked-div:nth-child(3) {
     background: url('yahoo2012.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.stacked-div:nth-child(4){
+.stacked-div:nth-child(4) {
     background: url('yahoo2005.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.stacked-div:nth-child(5){
+.stacked-div:nth-child(5) {
     background: url('Yahoo1999.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .stacked-div:hover {
-    bottom: calc(var(--bottom-position) + 20vh); /* Pop up on hover */
-    transition: 1s ease; /* Smooth transition */
+    bottom: calc(var(--bottom-position) + 20vh);
+    /* Pop up on hover */
+    transition: 1s ease;
+    /* Smooth transition */
 }
 
 .exploreTimeLine {
@@ -356,24 +364,37 @@ input[type=text]:focus {
     cursor: pointer;
 }
 
+.transparent {
+    background-color: rgba(0, 0, 0, 0.507);
+    backdrop-filter: blur(10px);
+    color: white;
+}
+
 .flexGrid {
+    padding-top: 16px;
     display: grid;
     width: 100%;
     height: 100%;
-    column-gap: 64px;
-    row-gap: 64px;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 16px;
+    row-gap: 16px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .cards {
     position: relative;
     background-color: #000000;
+    filter: grayscale(1);
     width: 100%;
     height: 100%;
     rotate: 0deg;
-    transition: rotate 0.4s ease;
+    transition: 0.4s ease;
     border: 1px solid var(--transparentGray);
+}
+
+.cards:hover{
+    filter: grayscale(0);
+    transition: 0.4s ease;
 }
 
 .line {
@@ -430,10 +451,10 @@ input[type=text]:focus {
 
 .globe {
     position: absolute;
-    right: -100px;
-    top: -100px;
-    width: 380px;
-    height: 380px;
+    right: -4vw;
+    top: -4vw;
+    width: 18vw;
+    height: 18vw;
     rotate: -30deg;
 }
 
